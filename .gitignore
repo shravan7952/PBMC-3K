@@ -16,6 +16,10 @@ dist/
 venv/
 .venv/
 
+# Scanpy raw cache (auto-generated binary, not the processed h5ad we want)
+backend/cache/*
+!backend/cache/*.h5ad
+
 # Node
 node_modules/
 frontend/dist/
