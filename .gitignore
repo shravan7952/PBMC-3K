@@ -1,0 +1,38 @@
+# Secrets & environment
+.env
+*.key
+
+# Raw dataset (large — already included in repo root, or auto-downloaded)
+pbmc3k_filtered_gene_bc_matrices/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.Python
+build/
+dist/
+*.egg
+venv/
+.venv/
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.production.local
+
+# Data cache (large files — download on first run)
+backend/cache/
+
+# Plots (generated at runtime)
+backend/plots/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db
