@@ -20,7 +20,7 @@ export default function Sidebar({ onQuery }) {
   ]
 
   return (
-    <aside className="w-56 flex flex-col border-r border-slate-800 bg-portal-900 overflow-y-auto">
+    <aside className="w-56 h-full flex flex-col border-r border-slate-800 bg-portal-900 overflow-y-auto">
       {/* Logo block */}
       <div className="px-4 pt-4 pb-3 border-b border-slate-800">
         <div className="flex items-center gap-2.5">

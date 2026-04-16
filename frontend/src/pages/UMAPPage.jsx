@@ -113,11 +113,11 @@ export default function UMAPPage() {
         </div>
 
         {/* UMAP */}
-        <div style={{ flex: 1, padding: '16px', minHeight: 0, overflow: 'hidden' }}>
+        <div style={{ flex: 1, padding: '16px', minHeight: 0, overflowY: 'auto' }}>
           <div style={{
-            height: '100%', background: '#070b14',
+            minHeight: '100%', background: '#070b14',
             border: '1px solid #1e293b', borderRadius: 12,
-            padding: '12px', overflow: 'hidden',
+            padding: '12px',
           }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 8 }}>
               <div>
