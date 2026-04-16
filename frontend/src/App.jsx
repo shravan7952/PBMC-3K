@@ -1,6 +1,5 @@
-// App.jsx – Root layout with React Router, fixed scrolling, TCGA portal design
 import { useEffect, useState } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom'
 import Header       from './components/Header.jsx'
 import Sidebar      from './components/Sidebar.jsx'
 import TabBar       from './components/TabBar.jsx'
@@ -16,6 +15,7 @@ import { api } from './api.js'
 function AppShell() {
   const [sidebarOpen,  setSidebarOpen]  = useState(true)
   const setBackendReady = useStore(s => s.setBackendReady)
+  const navigate = useNavigate()
 
   // Poll backend health until ready
   useEffect(() => {
@@ -31,6 +31,12 @@ function AppShell() {
     const id = setInterval(check, 4000)
     return () => clearInterval(id)
   }, [])
+
+  useEffect(() => {
+    const handleNav = () => navigate('/chat')
+    window.addEventListener('navigate-chat', handleNav)
+    return () => window.removeEventListener('navigate-chat', handleNav)
+  }, [navigate])
 
   return (
     <div style={{ height: '100vh', display: 'flex', flexDirection: 'column', overflow: 'hidden', background: '#070b14', color: '#e2e8f0' }}>
