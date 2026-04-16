@@ -69,7 +69,7 @@ function AppShell() {
             {/* Sidebar toggle */}
             <button
               onClick={() => setSidebarOpen(s => !s)}
-              style={{ padding: '8px 12px', color: '#475569', borderRight: '1px solid #1e293b', flexShrink: 0, cursor: 'pointer', background: 'transparent', border: 'none', borderRight: '1px solid #1e293b' }}
+              style={{ padding: '8px 12px', color: '#475569', flexShrink: 0, cursor: 'pointer', background: 'transparent', border: 'none', borderRight: '1px solid #1e293b' }}
               title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
             >
               <svg width="14" height="14" fill="none" stroke="currentColor" viewBox="0 0 24 24">
